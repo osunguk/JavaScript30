@@ -7,6 +7,18 @@
 </head>
 <body>
 <script>
+  let pressed = []
+  const sercretCode = 'start'
+
+  window.addEventListener('keyup', e => {
+    pressed.push(e.key)
+    if(pressed.length === 6){
+      pressed.shift()
+    }
+    if(pressed.join('') === sercretCode){
+      cornify_add ()
+    }
+  })
 </script>
 </body>
 </html>
